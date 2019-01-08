@@ -1,0 +1,28 @@
+﻿@model Weddy.ViewModels.FindEventViewModel
+
+@{
+    ViewBag.Title = "FindEvent";
+}
+
+<div class="jumbotron masthead">
+    <h1 style="color: #000">
+        @if (Model.IsError)
+        {
+            <text>Oops... <small>The event you were looking for wasn't found, please try to enter the details again below.</small></text>
+        }
+        else
+        {
+            <text>Join Existing Event</text>
+        }
+    </h1>
+    <form action="/Home/FindEvent" method="POST">
+        <h2>Enter unique key:</h2>
+        <div>
+            <input type="text" class="span8" id="uniqueIdentifier" name="uniqueIdentifier" />
+        </div>
+
+        <div>
+            <input type="submit" class="btn btn-large btn-primary" value="Find Event" />
+        </div>
+    </form>
+</div>

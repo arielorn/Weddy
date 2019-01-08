@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>@ViewBag.Title</title>
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/bootstrap-responsive.min.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/docs.css" rel="stylesheet">
+    <link href="~/Content/icons.css" rel="stylesheet">
+    <script type="text/javascript" src="~/Scripts/jquery-1.8.2.js"></script>
+    <script type="text/javascript" src="~/Scripts/knockout-2.2.0.js"></script>
+    <script type="text/javascript" src="~/Scripts/bootstrap.min.js"></script>
+    
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <meta name="viewport" content="width=device-width" />
+</head>
+<body>
+    <div class="navbar navbar-fixed-top">
+        <div class="navbar-inner">
+            <div class="container">
+                <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="brand" href="~/">Weddy</a>
+                <div class="nav-collapse">
+                    <form action="/Home/FindEvent" method="POST" class="navbar-form pull-right">
+                        <div class="input-append">
+                        <input type="text" class="navbar-search" placeholder="Search" id="uniqueIdentifier" name="uniqueIdentifier" />
+                        <button type="submit" class="btn">Find Event</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    @RenderBody()
+    <footer class="footer">
+        <div class="container">
+            <ul id="social">
+                <li><a href="http://www.facebook.com/weddyweb" class="facebook">Facebook</a></li>
+                @*<li><a href="http://twitter.com" class="twitter">Twitter</a></li>*@
+            </ul>
+            <p class="pull-right">
+                &copy; @DateTime.Now.Year - Weddy | 
+                <a href="mailto:contact@weddy.co.il">Contact</a> | @Html.ActionLink("Legal", "Legal", "Home")
+            </p>
+        </div>
+    </footer>
+</body>
+</html>

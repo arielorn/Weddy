@@ -1,0 +1,12 @@
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron jumbotron-background masthead">
+    <h1>Weddy</h1>
+    <p>Find if you are the cheapest guy in the party!</p>
+    <p>
+        <a href="@Url.Action("Create", "Home")" class="btn btn-primary btn-large">Create new pool</a>
+        <a href="@Url.Action("FindEvent", "Home")" class="btn btn-large">Join existing pool</a>
+    </p>
+</div>

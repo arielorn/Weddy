@@ -1,0 +1,74 @@
+﻿@using Weddy.Helpers
+@model Weddy.ViewModels.PoolViewModel
+
+@{
+    ViewBag.Title = Model.EventName;
+}
+
+<div id="mainDiv" class="jumbotron masthead">
+    <h1>
+        <span class="event-icon-@Model.EventType.ToLowerInvariant()"></span>
+        <span data-bind="text: EventName" />
+    </h1>
+    <h3>Average: <span data-bind="text: Average" /></h3>
+    <div class="container">
+        <div class="marketing">
+            <div class="row">
+                <div class="span4">
+                </div>
+                <div class="span4">
+                    <span data-bind="foreach: ActiveEntries">
+                        <div class="row-fluid well">
+                            <div class="pull-left span3">
+                                <img data-bind="attr: { src: Gravatar}" alt="Gravatar" class="gravatar" />
+                            </div>
+                            <div class="pull-left span8">
+                                <h3>
+                                    <strong><span data-bind="text: Name"></span></strong>
+                                    <br/>
+                                    <span data-bind="css: { 'deviation-negative': DeviationMin() < 0 || DeviationMax() < 0, 'deviation-positive': DeviationMin() > 0 || DeviationMax() > 0 }">
+                                        <span data-bind="text: DeviationText"></span>
+                                    </span>
+                                </h3>
+                            </div>
+                        </div>
+                    </span>
+                </div>
+                <div class="span4">
+                    <h2>Fill In</h2>
+                    <div class="control-group">
+                        <div class="controls">
+                            <label class="control-label" for="inputName">Name:</label>
+                            <input type="text" id="inputName" name="inputName" data-bind="value: inputName"/>
+                        </div>
+                        <div class="controls">
+                            <label class="control-label" for="inputEmail">Email:</label>
+                            <input type="email" id="inputEmail" name="inputName" data-bind="value: inputEmail"/>
+                        </div>
+                        <div class="controls">
+                            <label class="control-label" for="inputAmount">Ammount:</label>
+                            <input type="number" id="inputAmount" name="inputName" data-bind="value: inputAmount"/>
+                        </div>
+                    </div>
+                    <div>
+                        <input type="submit" class="btn btn-primary" id="inputButton" value="Submit" data-bind="click: sendInput">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript" src="~/JS/Weddy.js" ></script>
+<script type="text/javascript">
+    $(function () {
+        var defaultType = "@Model.EventType.ToLowerInvariant()";
+        $("#mainDiv").addClass("background-" + defaultType);
+        $("body").addClass("background-color-" + defaultType);
+
+        var weddy = weddyModule.Details();
+        ko.applyBindings(weddy.viewModel);
+        weddy.getDetails("@Model.UniqueIdentifier");
+
+    });
+</script>

@@ -1,0 +1,146 @@
+﻿[class^="event-icon-"],
+[class*=" event-icon-"] {
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  *margin-right: .3em;
+  line-height: 32px;
+  vertical-align: text-top;
+  background-image: url("images/eventicons.png");
+  background-position: 32px 32px;
+  background-repeat: no-repeat;
+}
+
+[class^="event-icon-"]:last-child,
+[class*=" event-icon-"]:last-child {
+  *margin-left: 0;
+}
+
+.navbar-fixed-top .brand {
+    color: #000;
+}
+
+.event-icon-white {
+  background-image: url("images/eventicons-white.png");
+}
+
+.event-icon-wedding {
+    background-position: 0 0;
+}
+.event-icon-birthday {
+    background-position: 32 0;
+}
+.event-icon-other {
+    background-position: 96 0;
+}
+
+
+.deviation {
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: bold;
+}
+.deviation-image {
+    margin: 8px;
+}
+.deviation-text 
+{
+    /*margin-top: 8px;
+    margin-bottom: 8px;
+    margin-left: 8px;*/
+}
+.deviation-negative {
+  color: #DD0000;
+}
+.deviation-positive {
+  color: #009900;
+}
+
+.banner {
+  color: #FFFFFF;
+
+  display: inline-block;
+  line-height: 65px;
+  width: 240px;
+  height: 85px;
+  vertical-align: text-top;
+  
+  background-image: url("images/banner.png");
+  background-repeat: no-repeat;
+  background-position: 0      0;
+}
+
+.background-wedding 
+{
+    position: relative;
+    background-repeat: no-repeat;
+    background-position: top;
+ }
+
+@media (max-width: 480px) {
+    .background-wedding {
+        background-image: url("images/backgrounds/wedding-small.png");
+        color: #000;
+    }
+}
+@media (max-width: 767px) {
+    .background-wedding {
+        background-image: url("images/backgrounds/wedding-small.png");
+        color: #606060;
+    }
+}
+@media (min-width: 768px) and (max-width: 979px)  {
+    .background-wedding {
+        background-image: url("images/backgrounds/wedding-medium.png");
+        color: #606060;
+    }
+}
+@media (min-width: 980px) and (max-width: 1199px) {
+    .background-wedding {
+        background-image: url("images/backgrounds/wedding-large.png");
+        color: #606060;
+    }
+}
+@media (min-width: 1200px) {
+    .background-wedding {
+        background-image: url("images/backgrounds/wedding-xlarge.png");
+        color: #606060;
+    }
+}
+
+.background-birthday {
+  /*background-image: url("images/backgrounds/birthday.png");*/
+    background-color: yellowgreen;
+}
+.background-other {
+  /*background-image: url("images/backgrounds/other.png");*/
+    background-color: skyblue;
+}
+
+
+ul#social li {
+    display: inline;
+    list-style: none;
+}
+
+    ul#social li a {
+        color: #999;
+        text-decoration: none;
+    }
+
+    a.facebook, a.twitter {
+        display: block;
+        float: left;
+        height: 32px;
+        padding-left: 17px;
+        text-indent: -9999px;
+        width: 32px;
+    }
+
+    a.facebook {
+        background: url("images/facebook.png") no-repeat;
+    }
+
+    a.twitter {
+        background: url("images/twitter.png") no-repeat;
+    }

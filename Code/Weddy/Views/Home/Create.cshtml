@@ -1,0 +1,49 @@
+﻿@model Weddy.ViewModels.CreatePoolViewModel
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<div id="mainDiv" class="jumbotron masthead">
+    <h1>Create new pool</h1>
+    <form action="/Home/Create" method="POST">
+        <div class="control-group">
+            <label class="control-label" for="EventType"><h2>Event type:</h2></label>
+            <div class="controls">
+                <select id="EventType" name="EventType">
+                    @foreach(var eventType in Model.EventTypes)
+                    {
+                        <option value="@eventType.Name">@eventType.DisplayName</option>   
+                    }
+                </select>
+                <span class="field-validation-valid" data-valmsg-for="EventType" data-valmsg-replace="true"></span>
+            </div>
+        </div>
+
+        <div class="control-group">
+            <label class="control-label" for="EventName"><h2>Event name:</h2></label>
+            <div class="controls">
+                <input id="EventName" name="EventName" type="text" value=""/>
+                <span class="field-validation-valid" data-valmsg-for="EventName" data-valmsg-replace="true"></span>
+            </div>
+        </div>
+
+        <input type="submit" class="btn btn-primary btn-large" value="Create" />
+    </form>
+</div>
+
+<script type="text/javascript">
+    (function () {
+        var defaultType = $("#EventType").attr('value').toLowerCase();
+        $("#mainDiv").addClass("background-" + defaultType);
+        
+        $('#EventType').change(function () {
+            var type = $(this).attr('value').toLowerCase();
+            $("#mainDiv")
+                .removeClass(function(index, css) {
+                    return (css.match( /\bbackground-\S+/g ) || []).join(' ');
+                })
+                .addClass("background-" + type);
+        });
+    })();
+</script>

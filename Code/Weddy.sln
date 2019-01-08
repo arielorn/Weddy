@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{800B1B1C-581F-4525-8CDC-E08D55109C30}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\NuGet.Config = .nuget\NuGet.Config
+		.nuget\nuget.exe = .nuget\nuget.exe
+		.nuget\NuGet.targets = .nuget\NuGet.targets
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Weddy", "Weddy\Weddy.csproj", "{CEB91122-8084-434E-A8A8-7CAEF2DBECC3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Weddy.Tests", "Weddy.Tests\Weddy.Tests.csproj", "{3A5716E4-F150-4B89-8FEF-B9693934E723}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{732C496E-F8AC-4ECE-9578-2AC829230A7E}"
+	ProjectSection(SolutionItems) = preProject
+		Local.testsettings = Local.testsettings
+		TraceAndTestImpact.testsettings = TraceAndTestImpact.testsettings
+		Weddy.vsmdi = Weddy.vsmdi
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 3
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://weddy.tfspreview.com/defaultcollection
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = Weddy\\Weddy.csproj
+		SccProjectName1 = Weddy
+		SccLocalPath1 = Weddy
+		SccProjectUniqueName2 = Weddy.Tests\\Weddy.Tests.csproj
+		SccProjectName2 = Weddy.Tests
+		SccLocalPath2 = Weddy.Tests
+	EndGlobalSection
+	GlobalSection(TestCaseManagementSettings) = postSolution
+		CategoryFile = Weddy.vsmdi
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CEB91122-8084-434E-A8A8-7CAEF2DBECC3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CEB91122-8084-434E-A8A8-7CAEF2DBECC3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CEB91122-8084-434E-A8A8-7CAEF2DBECC3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CEB91122-8084-434E-A8A8-7CAEF2DBECC3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3A5716E4-F150-4B89-8FEF-B9693934E723}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3A5716E4-F150-4B89-8FEF-B9693934E723}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3A5716E4-F150-4B89-8FEF-B9693934E723}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3A5716E4-F150-4B89-8FEF-B9693934E723}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
